@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KainThereYah - Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="images/Kain.png" alt="" width="50" height="50" class="d-inline-block">
+                <span>KainThereYah!</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-lg-3 mt-3 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html"><i
+                                class="bi bi-house-fill"></i>
+                            Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="menu.html"><i
+                                class="bi bi-calculator"></i>
+                            Menu Prices </a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html"><i
+                                class="bi bi-person-lines-fill"></i> Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="menu-section">
+        <div class="container">
+            <h2 class="mb-4" style="border-bottom: 1px solid var(--accent);">Our Catering Packages <i
+                    class="bi bi-box-seam primary"></i></h2>
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 catering-card">
+                        <div class="card-body text-center">
+                            <h3 class="card-title h5">Fiesta Package</h3>
+                            <p class="card-text">Good for 10-15 pax. Includes 3 ulam choices and 1 dessert.</p>
+                            <p class="fw-bold text-accent">₱2,500.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 catering-card">
+                        <div class="card-body text-center">
+                            <h3 class="card-title h5">Celebration Package</h3>
+                            <p class="card-text">Good for 20-25 pax. Includes 4 ulam choices, rice, and 2 desserts.</p>
+                            <p class="fw-bold text-accent">₱4,500.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0 catering-card">
+                        <div class="card-body text-center">
+                            <h3 class="card-title h5">Grand Banquet</h3>
+                            <p class="card-text">Good for 50+ pax. Custom menu with drinks and complete setup.</p>
+                            <p class="fw-bold text-accent">Starts at ₱10,000.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 style=" border-bottom: 1px solid var(--accent);"> Our Menu & Price List <i
+                    class="bi bi-fork-knife primary"></i></h2>
+            <p> Select the quantity of the items you want to order to
+                calculate the total cost.</p>
+
+            <table class="menu-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pork Sisig</td>
+                        <td>Sizzling pork with egg and calamansi</td>
+                        <td>₱70</td>
+                        <td><input type="number" min="0" value="0" class="item-qty" data-price="70"></td>
+                    </tr>
+                    <tr>
+                        <td>Kare-Kare</td>
+                        <td>Beef and tripe in peanut sauce</td>
+                        <td>₱80</td>
+                        <td><input type="number" min="0" value="0" class="item-qty" data-price="80"></td>
+                    </tr>
+                    <tr>
+                        <td>Ginataang Alimasag</td>
+                        <td>Crabs cooked in coconut milk</td>
+                        <td>₱120</td>
+                        <td><input type="number" min="0" value="0" class="item-qty" data-price="120"></td>
+                    </tr>
+                    <tr>
+                        <td>Sinigang na Baboy</td>
+                        <td>Sour pork soup with vegetables</td>
+                        <td>₱75</td>
+                        <td><input type="number" min="0" value="0" class="item-qty" data-price="75"></td>
+                    </tr>
+                    <tr>
+                        <td>Extra Rice</td>
+                        <td>Steamed white rice</td>
+                        <td>₱15</td>
+                        <td><input type="number" min="0" value="0" class="item-qty" data-price="15"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="calculator-panel flex-wrap gap-3">
+                <div class="d-flex align-items-center gap-2">
+                    <input type="checkbox" id="delivery-fee" class="form-check-input" data-fee="50">
+                    <label for="delivery-fee" class="form-check-label">Add Delivery Fee (₱50.00)</label>
+                </div>
+                <div class="d-flex align-items-center gap-4">
+                    <h3 class="mb-0">Total Cost: <span id="total-cost">₱0.00</span></h3>
+                    <button id="reset-btn" class="btn btn-secondary">Reset Calculator</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 KainThereYah!. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
