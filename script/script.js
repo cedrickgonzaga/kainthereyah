@@ -37,6 +37,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-function submit(){
-    alert("Your message was submitted!")
+function submit() {
+    const email = document.getElementById('email').value;
+    const fullName = document.getElementById('fullName')?.value;
+    const message = document.getElementById('textArea').value;
+
+    // JavaScript Validation Logic
+    if (!email || !message || (document.getElementById('fullName') && !fullName)) {
+        alert("Please fill out all required fields.");
+        return false;
+    }
+
+    if (!email.includes('@')) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
+
+    alert(`Thank you, ${fullName || 'Guest'}! Your message was submitted successfully.`);
+    document.querySelector('form').reset();
 }

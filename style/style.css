@@ -110,12 +110,26 @@ body {
     transform: translateY(-5px);
 }
 
+.section-header {
+    text-align: center;
+    background-color: var(--header);
+    color: #fff !important;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    margin-bottom: 2.5rem !important;
+    border: none !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 /* Menu Table */
 .menu-section {
     padding: 4rem 0;
 }
 
-.menu-section h2 {
+.menu-section h2:not(.section-header) {
     color: var(--header);
     margin-bottom: 1rem;
 }
