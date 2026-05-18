@@ -1,5 +1,5 @@
 :root {
-    --bg: #EDE9E6;
+    --bg: #FAF9F6;
     --secondary: #C9996B;
     --accent: #5C4F4A;
     --header: #5C766D;
@@ -102,7 +102,6 @@ body {
 }
 
 .catering-card {
-    background-color: #f2f2f2 !important;
     border-top: 4px solid var(--secondary) !important;
     transition: transform 0.3s ease;
 }
