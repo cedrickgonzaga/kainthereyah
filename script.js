@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-function submit() {
+function submitMessage() {
     const email = document.getElementById('email').value;
     const fullName = document.getElementById('fullName')?.value;
     const message = document.getElementById('textArea').value;
@@ -90,5 +90,12 @@ function submit() {
         return false;
     }
 
-    document.querySelector('form').reset();
+    // Show Bootstrap Modal
+    const modalElement = document.getElementById('submitModal');
+    if (modalElement && typeof bootstrap !== 'undefined') {
+        const submitModal = new bootstrap.Modal(modalElement);
+        submitModal.show();
+    }
+
+    document.getElementById('contactForm').reset();
 }

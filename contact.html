@@ -41,17 +41,23 @@
     <section class="contact-section py-5">
         <div class="container">
             <!-- Contact Info Row -->
-            <div class="row mb-5 text-center">
-                <div class="col-md-6 mb-3 mb-md-0">
-                    <div class="p-3 bg-white shadow-sm rounded border border-black">
-                        <i class="bi bi-telephone-fill text-accent fs-4"></i>
-                        <p class="mb-0 mt-2 fw-bold">+63 912 345 6789</p>
+            <div class="row mb-5 text-center g-4 justify-content-center">
+                <div class="col-md-5">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <h5 class="text-accent fw-bold mb-2">Call Us</h5>
+                        <p class="mb-0 text-muted fs-5">+63 912 345 6789</p>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="p-3 bg-white shadow-sm rounded border border-black">
-                        <i class="bi bi-envelope-at-fill text-accent fs-4"></i>
-                        <p class="mb-0 mt-2 fw-bold">hello@kainthereyah.com</p>
+                <div class="col-md-5">
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <i class="bi bi-envelope-at-fill"></i>
+                        </div>
+                        <h5 class="text-accent fw-bold mb-2">Email Us</h5>
+                        <p class="mb-0 text-muted fs-5">hello@kainthereyah.com</p>
                     </div>
                 </div>
             </div>
@@ -59,26 +65,23 @@
             <div class="row g-4">
                 <!-- Form Column -->
                 <div class="col-lg-6">
-                    <div class="card shadow-sm border-0 p-4 h-100">
-                        <h2 class="mb-4 text-accent">Send us a message</h2>
-                        <form onsubmit="event.preventDefault(); submit();">
-                            <div class="mb-3">
-                                <label for="fullName" class="form-label">Full Name</label>
-                                <input type="text" class="form-control" id="fullName" placeholder="Juan Dela Cruz"
-                                    required>
+                    <div class="card shadow-sm border-0 p-4 p-md-5 h-100 rounded-4">
+                        <h2 class="mb-4 text-accent fw-bold">Send us a message</h2>
+                        <form onsubmit="event.preventDefault(); submitMessage();" id="contactForm">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control bg-light border-0" id="fullName" placeholder="Juan Dela Cruz" required>
+                                <label for="fullName">Full Name</label>
                             </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="email" placeholder="name@example.com"
-                                    required>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control bg-light border-0" id="email" placeholder="name@example.com" required>
+                                <label for="email">Email Address</label>
                             </div>
-                            <div class="mb-3">
-                                <label for="textArea" class="form-label">Your Message</label>
-                                <textarea class="form-control" id="textArea" rows="5" placeholder="How can we help you?"
-                                    required></textarea>
+                            <div class="form-floating mb-4">
+                                <textarea class="form-control bg-light border-0" id="textArea" style="height: 150px" placeholder="How can we help you?" required></textarea>
+                                <label for="textArea">Your Message</label>
                             </div>
-                            <div class="d-grid mt-4">
-                                <button type="submit" class="btn btn-primary">Submit Message</button>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg rounded-pill fw-bold shadow-sm">Submit Message</button>
                             </div>
                         </form>
                     </div>
@@ -97,6 +100,22 @@
             </div>
         </div>
     </section>
+
+    <!-- Submit Modal -->
+    <div class="modal fade" id="submitModal" tabindex="-1" aria-labelledby="submitModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow text-center p-4 rounded-4">
+                <div class="modal-body">
+                    <i class="bi bi-check-circle-fill text-success" style="font-size: 4rem;"></i>
+                    <h4 class="mt-4 mb-3 text-accent fw-bold" id="submitModalLabel">Success!</h4>
+                    <p class="mb-0 text-muted">Your message has been sent and we'll respond to you as soon as possible.</p>
+                </div>
+                <div class="modal-footer border-0 justify-content-center pb-0">
+                    <button type="button" class="btn btn-primary px-5 rounded-pill fw-bold" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="container text-center">

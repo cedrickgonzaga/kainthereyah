@@ -227,17 +227,44 @@ footer {
     }
 }
 
+.bg-header {
+    background-color: var(--header) !important;
+}
+
 .contact-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 4rem 0;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 500px;
+.contact-info-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 2.5rem 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid var(--secondary);
+    height: 100%;
+}
+
+.contact-info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-info-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: var(--mute);
+    color: var(--header);
+    border-radius: 50%;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-info-card:hover .contact-info-icon {
+    background-color: var(--header);
+    color: #fff;
 }
