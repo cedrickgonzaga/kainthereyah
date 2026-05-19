@@ -56,7 +56,7 @@ body {
 /* Hero Section */
 .hero-section {
     background-color: var(--mute);
-    border-bottom: 2px solid var(--secondary);
+    border-bottom: 1px solid var(--secondary);
     padding: 4rem 0;
 }
 
@@ -107,6 +107,14 @@ body {
 }
 
 .catering-card:hover {
+    transform: translateY(-5px);
+}
+
+.hover-transform {
+    transition: transform 0.3s ease;
+}
+
+.hover-transform:hover {
     transform: translateY(-5px);
 }
 

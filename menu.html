@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KainThereYah - Menu</title>
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
@@ -44,8 +44,16 @@
                     <div class="card h-100 shadow-sm border-0 catering-card bg-success-subtle">
                         <div class="card-body text-center">
                             <h3 class="card-title h5">Fiesta Package</h3>
-                            <p class="card-text">Good for 10-15 pax. Includes 3 ulam choices and 1 dessert.</p>
-                            <p class="fw-bold text-accent">₱2,500.00</p>
+                            <p class="card-text">Good for 20 pax. 3 ulam choices, rice, 1 dessert. (Includes Free
+                                Delivery & Catering Setup)</p>
+                            <p class="fw-bold text-accent mb-2">₱5,000.00</p>
+                            <div class="d-flex justify-content-center align-items-center gap-3">
+                                <button class="btn btn-outline-danger minus-pkg-btn btn-sm px-2 py-1"><i
+                                        class="bi bi-dash"></i></button>
+                                <span class="pkg-qty fw-bold fs-5" data-price="5000">0</span>
+                                <button class="btn btn-outline-success add-pkg-btn btn-sm px-2 py-1"><i
+                                        class="bi bi-plus"></i></button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -53,8 +61,16 @@
                     <div class="card h-100 shadow-sm border-0 catering-card bg-warning-subtle">
                         <div class="card-body text-center">
                             <h3 class="card-title h5">Celebration Package</h3>
-                            <p class="card-text">Good for 20-25 pax. Includes 4 ulam choices, rice, and 2 desserts.</p>
-                            <p class="fw-bold text-accent">₱4,500.00</p>
+                            <p class="card-text">Good for 50 pax. 4 ulam choices, rice, 2 desserts. (Includes Free
+                                Delivery & Catering Setup)</p>
+                            <p class="fw-bold text-accent mb-2">₱15,000.00</p>
+                            <div class="d-flex justify-content-center align-items-center gap-3">
+                                <button class="btn btn-outline-danger minus-pkg-btn btn-sm px-2 py-1"><i
+                                        class="bi bi-dash"></i></button>
+                                <span class="pkg-qty fw-bold fs-5" data-price="15000">0</span>
+                                <button class="btn btn-outline-success add-pkg-btn btn-sm px-2 py-1"><i
+                                        class="bi bi-plus"></i></button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -62,17 +78,74 @@
                     <div class="card h-100 shadow-sm border-0 catering-card bg-info-subtle">
                         <div class="card-body text-center">
                             <h3 class="card-title h5">Grand Banquet</h3>
-                            <p class="card-text">Good for 50+ pax. Custom menu with drinks and complete setup.</p>
-                            <p class="fw-bold text-accent">Starts at ₱10,000.00</p>
+                            <p class="card-text">Good for 100 pax. 5 ulam choices, rice, 3 desserts, drinks. (Includes
+                                Free Delivery & Premium Setup)</p>
+                            <p class="fw-bold text-accent mb-2">₱40,000.00</p>
+                            <div class="d-flex justify-content-center align-items-center gap-3">
+                                <button class="btn btn-outline-danger minus-pkg-btn btn-sm px-2 py-1"><i
+                                        class="bi bi-dash"></i></button>
+                                <span class="pkg-qty fw-bold fs-5" data-price="40000">0</span>
+                                <button class="btn btn-outline-success add-pkg-btn btn-sm px-2 py-1"><i
+                                        class="bi bi-plus"></i></button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <h2 class="section-header"> Our Menu & Price List <i class="bi bi-fork-knife primary"></i></h2>
+
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-3 mb-4">
+                <div class="col">
+                    <div class="card h-100 hover-transform">
+                        <img src="images/sinigang.jpg" class="card-img-top" alt="Sinigang">
+                        <div class="card-body">
+                            <h5 class="card-title">Sinigang</h5>
+                            <p class="card-text">₱100</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 hover-transform">
+                        <img src="images/crab.jpg" class="card-img-top" alt="Ginataang Alimasag">
+                        <div class="card-body">
+                            <h5 class="card-title">Ginataang Alimasag</h5>
+                            <p class="card-text">₱150</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 hover-transform">
+                        <img src="images/kare.jpeg" class="card-img-top" alt="Karekare">
+                        <div class="card-body">
+                            <h5 class="card-title">Karekare</h5>
+                            <p class="card-text">₱120</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 hover-transform">
+                        <img src="images/sisig.jpg" class="card-img-top" alt="Pork Sisig">
+                        <div class="card-body">
+                            <h5 class="card-title">Pork Sisig</h5>
+                            <p class="card-text">₱100</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 hover-transform">
+                        <img src="images/rice.jpg" class="card-img-top" alt="Rice">
+                        <div class="card-body">
+                            <h5 class="card-title">Rice</h5>
+                            <p class="card-text">₱15</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-header"> Price Calculator <i class="bi bi-calculator"></i></h2>
             <p> Select the quantity of the items you want to order to
                 calculate the total cost.</p>
-
             <table class="table table-hover menu-table">
                 <thead>
                     <tr>
@@ -86,26 +159,26 @@
                     <tr>
                         <td>Pork Sisig</td>
                         <td>Sizzling pork with egg and calamansi</td>
-                        <td>₱70</td>
-                        <td><input type="number" min="0" value="0" class="item-qty" data-price="70"></td>
+                        <td>₱100</td>
+                        <td><input type="number" min="0" value="0" class="item-qty" data-price="100"></td>
                     </tr>
                     <tr>
                         <td>Kare-Kare</td>
                         <td>Beef and tripe in peanut sauce</td>
-                        <td>₱80</td>
-                        <td><input type="number" min="0" value="0" class="item-qty" data-price="80"></td>
-                    </tr>
-                    <tr>
-                        <td>Ginataang Alimasag</td>
-                        <td>Crabs cooked in coconut milk</td>
                         <td>₱120</td>
                         <td><input type="number" min="0" value="0" class="item-qty" data-price="120"></td>
                     </tr>
                     <tr>
+                        <td>Ginataang Alimasag</td>
+                        <td>Crabs cooked in coconut milk</td>
+                        <td>₱150</td>
+                        <td><input type="number" min="0" value="0" class="item-qty" data-price="150"></td>
+                    </tr>
+                    <tr>
                         <td>Sinigang na Baboy</td>
                         <td>Sour pork soup with vegetables</td>
-                        <td>₱75</td>
-                        <td><input type="number" min="0" value="0" class="item-qty" data-price="75"></td>
+                        <td>₱100</td>
+                        <td><input type="number" min="0" value="0" class="item-qty" data-price="100"></td>
                     </tr>
                     <tr>
                         <td>Extra Rice</td>
@@ -129,6 +202,24 @@
         </div>
     </section>
 
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 bg-transparent">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img src="" id="modalImage" class="img-fluid rounded shadow-lg" alt="Menu Item"
+                        style="max-height: 80vh;">
+                    <h4 id="modalCaption" class="text-white mt-3 mb-0"
+                        style="text-shadow: 1px 1px 3px rgba(0,0,0,0.8);"></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="container text-center">
             <p>&copy; 2026 KainThereYah!. All rights reserved.</p>
@@ -136,7 +227,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/script/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
