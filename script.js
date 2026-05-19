@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const resetBtn = document.getElementById('reset-btn');
     const deliveryCheckbox = document.getElementById('delivery-fee');
 
-    // Catering Packages UI Elements
     const addPkgBtns = document.querySelectorAll('.add-pkg-btn');
     const minusPkgBtns = document.querySelectorAll('.minus-pkg-btn');
     const pkgQties = document.querySelectorAll('.pkg-qty');
@@ -76,21 +75,39 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function submitMessage() {
-    const email = document.getElementById('email').value;
-    const fullName = document.getElementById('fullName')?.value;
-    const message = document.getElementById('textArea').value;
+    const emailInput = document.getElementById('email');
+    const fullNameInput = document.getElementById('fullName');
+    const messageInput = document.getElementById('textArea');
 
-    if (!email || !message || (document.getElementById('fullName') && !fullName)) {
-        alert("Please fill out all required fields.");
+    const email = emailInput.value;
+    const fullName = fullNameInput ? fullNameInput.value : '';
+    const message = messageInput.value;
+
+    let isValid = true;
+
+    emailInput.classList.remove('is-invalid');
+    if (fullNameInput) fullNameInput.classList.remove('is-invalid');
+    messageInput.classList.remove('is-invalid');
+
+    if (fullNameInput && !fullName) {
+        fullNameInput.classList.add('is-invalid');
+        isValid = false;
+    }
+
+    if (!email || !email.includes('@')) {
+        emailInput.classList.add('is-invalid');
+        isValid = false;
+    }
+
+    if (!message) {
+        messageInput.classList.add('is-invalid');
+        isValid = false;
+    }
+
+    if (!isValid) {
         return false;
     }
 
-    if (!email.includes('@')) {
-        alert("Please enter a valid email address.");
-        return false;
-    }
-
-    // Show Bootstrap Modal
     const modalElement = document.getElementById('submitModal');
     if (modalElement && typeof bootstrap !== 'undefined') {
         const submitModal = new bootstrap.Modal(modalElement);
@@ -98,4 +115,6 @@ function submitMessage() {
     }
 
     document.getElementById('contactForm').reset();
+    
+    document.getElementById('contactForm').classList.remove('was-validated');
 }

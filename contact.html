@@ -67,18 +67,21 @@
                 <div class="col-lg-6">
                     <div class="card shadow-sm border-0 p-4 p-md-5 h-100 rounded-4">
                         <h2 class="mb-4 text-accent fw-bold">Send us a message</h2>
-                        <form onsubmit="event.preventDefault(); submitMessage();" id="contactForm">
+                        <form onsubmit="event.preventDefault(); submitMessage();" id="contactForm" class="needs-validation" novalidate>
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control bg-light border-0" id="fullName" placeholder="Juan Dela Cruz" required>
                                 <label for="fullName">Full Name</label>
+                                <div class="invalid-feedback" id="nameError">Please enter your full name.</div>
                             </div>
                             <div class="form-floating mb-3">
                                 <input type="email" class="form-control bg-light border-0" id="email" placeholder="name@example.com" required>
                                 <label for="email">Email Address</label>
+                                <div class="invalid-feedback" id="emailError">Please enter a valid email address.</div>
                             </div>
                             <div class="form-floating mb-4">
                                 <textarea class="form-control bg-light border-0" id="textArea" style="height: 150px" placeholder="How can we help you?" required></textarea>
                                 <label for="textArea">Your Message</label>
+                                <div class="invalid-feedback" id="messageError">Please enter your message.</div>
                             </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-primary btn-lg rounded-pill fw-bold shadow-sm">Submit Message</button>
