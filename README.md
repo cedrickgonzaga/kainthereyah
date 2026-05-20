@@ -1,4 +1,4 @@
-##Reflection
+#Reflection
 
 I have built a dedicated website for a local karinderia, an online presence platform for them to showcase what they offer . The NTC's mission to build character and serve the Republic reflects upon me, where helping others always starts from to our neighbours 🤝.
 
