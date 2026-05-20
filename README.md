@@ -1,3 +1,5 @@
+##Reflection
+
 I have built a dedicated website for a local karinderia, an online presence platform for them to showcase what they offer . The NTC's mission to build character and serve the Republic reflects upon me, where helping others always starts from to our neighbours 🤝.
 
 The main purpose of this website is to create a platform for the karinderia stores in Manila, showcasing their home-cooked food , catering options , and delivery services . Our local food vendors are the ones that fuels people with affordable meals, but they're often left behind in due to the advancement of technology . In order to combat this, we can give them a chance by constructing them a eye-pleasing and modern online presence website 💻✨. 
